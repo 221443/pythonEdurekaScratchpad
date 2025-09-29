@@ -46,6 +46,7 @@ tuple_value = (1, 2, 3)
 type_of_tuple = type(tuple_value)
 print(f"The type of {tuple_value} is {type_of_tuple}")
 # Tuple is immutable, so we cannot change it in place.
+# Tuple cannot be changed in place.
 # tuple_value[0] = 0 # This would raise an error.
 
 # Set

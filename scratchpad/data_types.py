@@ -70,3 +70,22 @@ print(f"After adding, the dictionary is now {dictionary_value}")
 print("hello world")
 
 # This file demonstrates various data types in Python and prints their types.
+
+# Example of type mismatch
+name = "John"
+age = 30
+# name_age = name + age # This will raise an error because we cannot concatenate str and int directly.
+name_age = name + str(age) # Correct way to concatenate
+print(f"Name and age concatenated: {name_age}")
+
+
+#Type conversion functions
+'''
+This functions converts any data type to given data type
+    int()
+    float()
+    tuple()
+    list()
+    set()
+    dict()
+'''

@@ -24,13 +24,13 @@ my_bool = True
 my_list = [1, 2, 3, 2, 1]
 my_tuple = (4, 5, 6, 5, 4)
 my_set = {7, 8, 9}
-my_dict = {'a': 10, 'b': 20, 'c': 30}
+my_dict = {"a": 10, "b": 20, "c": 30}
 
 # Special cases
 empty_list = []
 single_element_list = [100]
 nested_list = [[1, 2], [3, 4]]
-dict_items = [('x', 1), ('y', 2)]  # List of tuples for dict conversion
+dict_items = [("x", 1), ("y", 2)]  # List of tuples for dict conversion
 
 print(f"my_int: {my_int} (type: {type(my_int).__name__})")
 print(f"my_float: {my_float} (type: {type(my_float).__name__})")
@@ -230,14 +230,14 @@ print(f"dict({dict_items}) = {dict_from_pairs}")
 print("  → List of (key, value) tuples becomes dictionary")
 
 # From zip of two sequences
-keys = ['name', 'age', 'city']
-values = ['Alice', 25, 'NYC']
+keys = ["name", "age", "city"]
+values = ["Alice", 25, "NYC"]
 dict_from_zip = dict(zip(keys, values))
 print(f"dict(zip({keys}, {values})) = {dict_from_zip}")
 print("  → Combines two sequences into key-value pairs")
 
 # From list of lists (each with 2 elements)
-list_pairs = [['a', 1], ['b', 2], ['c', 3]]
+list_pairs = [["a", 1], ["b", 2], ["c", 3]]
 dict_from_list_pairs = dict(list_pairs)
 print(f"dict({list_pairs}) = {dict_from_list_pairs}")
 print("  → Nested lists with 2 elements become key-value pairs")
@@ -275,10 +275,12 @@ print(f"  bool([1]) = {bool([1])}  → Non-empty collections are True")
 print(f"  bool({{}}) = {bool({})}  → Empty dict is False")
 print(f"  bool({{1}}) = {bool({1})}  → Non-empty set is True")
 
+
 # Practical example: Remove duplicates while preserving order
 def remove_duplicates_preserve_order(lst):
     """Remove duplicates while preserving order using dict.fromkeys()"""
     return list(dict.fromkeys(lst))
+
 
 original_list = [3, 1, 2, 1, 3, 2, 4]
 deduped = remove_duplicates_preserve_order(original_list)
@@ -294,7 +296,8 @@ print("  → dict.fromkeys() preserves first occurrence order")
 print("\n" + "=" * 60)
 print("CONVERSION COMPATIBILITY SUMMARY")
 print("=" * 60)
-print("""
+print(
+    """
 From → To    | int | float | tuple | list | set | dict
 -------------|-----|-------|-------|------|-----|------
 int          | ✓   | ✓     | ✗¹    | ✗¹   | ✗¹  | ✗
@@ -313,7 +316,8 @@ Notes:
 ⁴ Each character becomes an element
 ⁵ Elements must be (key, value) pairs
 ⁶ Only keys are converted by default
-""")
+"""
+)
 
 print("\n🔑 KEY TAKEAWAYS:")
 print("• int() and float() only work with numbers, numeric strings, and bools")
@@ -324,7 +328,7 @@ print("• dict keys are converted when converting dict to other types")
 print("• Empty collections evaluate to False, non-empty to True")
 
 
-'''
+"""
 Claude AI:
 I'll create a comprehensive Python code that demonstrates type conversion between different data types. This will be an excellent learning resource for understanding Python's type system.I've created a comprehensive Python script that demonstrates type conversion between all major Python data types. This educational code covers:
 
@@ -361,4 +365,4 @@ The code demonstrates important Python behaviors:
 - Order preservation vs. non-preservation
 
 Run this code to see exactly how Python handles each type conversion, complete with examples of what works, what doesn't, and why. This will give you a solid understanding of Python's type system!
-'''
+"""
